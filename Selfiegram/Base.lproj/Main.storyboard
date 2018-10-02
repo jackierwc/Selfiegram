@@ -67,17 +67,51 @@
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-707.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="0S8-Bj-gBL">
             <objects>
-                <viewController id="1Gw-dn-z6Y" sceneMemberID="viewController">
+                <viewController id="1Gw-dn-z6Y" customClass="ProfileViewController" customModule="Selfiegram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WCf-mA-LVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-Pw-Xse">
+                                <rect key="frame" x="97.5" y="110" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="qMC-P0-hTq"/>
+                                    <constraint firstAttribute="width" constant="180" id="x5o-Mh-c01"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgQ-Xj-trI">
+                                <rect key="frame" x="149.5" y="325" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fl-oN-rmS">
+                                <rect key="frame" x="97" y="288" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="1Gw-dn-z6Y" eventType="touchUpInside" id="u9t-4U-0RP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xgQ-Xj-trI" firstAttribute="top" secondItem="cK4-Pw-Xse" secondAttribute="bottom" constant="30" id="Dvq-jy-oNm"/>
+                            <constraint firstItem="cK4-Pw-Xse" firstAttribute="centerX" secondItem="WCf-mA-LVa" secondAttribute="centerX" id="QLO-OV-QcP"/>
+                            <constraint firstItem="cK4-Pw-Xse" firstAttribute="top" secondItem="Wl8-yp-X7k" secondAttribute="top" constant="46" id="VVt-GI-Q0Z"/>
+                            <constraint firstItem="cK4-Pw-Xse" firstAttribute="leading" secondItem="3fl-oN-rmS" secondAttribute="trailing" constant="-53.5" id="c39-JC-dtn"/>
+                            <constraint firstItem="xgQ-Xj-trI" firstAttribute="centerX" secondItem="WCf-mA-LVa" secondAttribute="centerX" id="mYk-F9-fKY"/>
+                            <constraint firstItem="3fl-oN-rmS" firstAttribute="top" secondItem="cK4-Pw-Xse" secondAttribute="bottom" constant="-7" id="muN-Ty-BzS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wl8-yp-X7k"/>
                     </view>
                     <navigationItem key="navigationItem" id="a6H-RB-KRI"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="cK4-Pw-Xse" id="CeD-Hz-lkv"/>
+                        <outlet property="usernamelabel" destination="xgQ-Xj-trI" id="yy8-dw-7FJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHD-f5-fQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-994" y="-707"/>
         </scene>
-        <!--page 3-->
+        <!--profile-->
         <scene sceneID="grV-wi-udi">
             <objects>
-                <navigationController title="page 3" automaticallyAdjustsScrollViewInsets="NO" id="qTT-uO-ZlW" sceneMemberID="viewController">
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="qTT-uO-ZlW" userLabel="profile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="4RN-5d-Ig0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MZM-Cf-OAl">
@@ -129,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-1374.0629685157423"/>
         </scene>
-        <!--page 2-->
+        <!--Navigation Bar-->
         <scene sceneID="mAt-1V-nYT">
             <objects>
-                <navigationController title="page 2" automaticallyAdjustsScrollViewInsets="NO" id="beu-Cv-9AS" sceneMemberID="viewController">
+                <navigationController title="page 2" automaticallyAdjustsScrollViewInsets="NO" id="beu-Cv-9AS" userLabel="Navigation Bar" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Activities" image="Activities" id="dV6-qA-7mp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W5D-hn-uQr">
@@ -149,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-707.49625187406298"/>
         </scene>
-        <!--page 1-->
+        <!--News Feed-->
         <scene sceneID="Ukb-Co-n9U">
             <objects>
-                <navigationController title="page 1" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" sceneMemberID="viewController">
+                <navigationController title="page 1" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" userLabel="News Feed" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" id="2zA-dY-xR7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kW6-zQ-Cn0">
@@ -174,5 +208,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
