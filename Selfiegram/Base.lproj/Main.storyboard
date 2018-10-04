@@ -134,9 +134,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="TWT-vo-AVg" kind="relationship" relationship="viewControllers" id="GJc-W4-OBx"/>
-                        <segue destination="beu-Cv-9AS" kind="relationship" relationship="viewControllers" id="SX2-WZ-n5a"/>
-                        <segue destination="qTT-uO-ZlW" kind="relationship" relationship="viewControllers" id="vXl-pl-Elb"/>
+                        <segue destination="qTT-uO-ZlW" kind="relationship" relationship="viewControllers" id="LXT-gT-IUz"/>
+                        <segue destination="beu-Cv-9AS" kind="relationship" relationship="viewControllers" id="AYW-Md-6Ro"/>
+                        <segue destination="TWT-vo-AVg" kind="relationship" relationship="viewControllers" id="d4y-A2-v4W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4Q-BV-h0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-1374.0629685157423"/>
         </scene>
-        <!--Navigation Bar-->
+        <!--Activities-->
         <scene sceneID="mAt-1V-nYT">
             <objects>
-                <navigationController title="page 2" automaticallyAdjustsScrollViewInsets="NO" id="beu-Cv-9AS" userLabel="Navigation Bar" sceneMemberID="viewController">
+                <navigationController title="page 2" automaticallyAdjustsScrollViewInsets="NO" id="beu-Cv-9AS" userLabel="Activities" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Activities" image="Activities" id="dV6-qA-7mp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W5D-hn-uQr">
@@ -186,7 +186,7 @@
         <!--Profile-->
         <scene sceneID="Ukb-Co-n9U">
             <objects>
-                <navigationController title="page 1" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" userLabel="Profile" sceneMemberID="viewController">
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" userLabel="Profile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="2zA-dY-xR7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kW6-zQ-Cn0">
