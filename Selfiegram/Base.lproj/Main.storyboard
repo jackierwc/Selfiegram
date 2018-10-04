@@ -143,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="-994" y="-707"/>
         </scene>
-        <!--profile-->
+        <!--News Feed-->
         <scene sceneID="grV-wi-udi">
             <objects>
-                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="qTT-uO-ZlW" userLabel="profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="4RN-5d-Ig0"/>
+                <navigationController title="Newsfeed 1" automaticallyAdjustsScrollViewInsets="NO" id="qTT-uO-ZlW" userLabel="News Feed" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" id="4RN-5d-Ig0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MZM-Cf-OAl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -183,11 +183,11 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-707.49625187406298"/>
         </scene>
-        <!--News Feed-->
+        <!--Profile-->
         <scene sceneID="Ukb-Co-n9U">
             <objects>
-                <navigationController title="page 1" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" userLabel="News Feed" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" id="2zA-dY-xR7"/>
+                <navigationController title="page 1" automaticallyAdjustsScrollViewInsets="NO" id="TWT-vo-AVg" userLabel="Profile" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="2zA-dY-xR7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kW6-zQ-Cn0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
