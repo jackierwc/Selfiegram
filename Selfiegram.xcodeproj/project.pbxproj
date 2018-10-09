@@ -10,6 +10,7 @@
 		8C4B2F9A216312DE006177A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B2F99216312DE006177A6 /* ProfileViewController.swift */; };
 		8CD6FFB62165B589000CDC62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FFB52165B589000CDC62 /* User.swift */; };
 		8CD6FFB82165B784000CDC62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FFB72165B784000CDC62 /* Post.swift */; };
+		8CD6FFBC216C4954000CDC62 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FFBB216C4954000CDC62 /* FeedTableViewController.swift */; };
 		8CF88484215C721600FAEF17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF88483215C721600FAEF17 /* AppDelegate.swift */; };
 		8CF88486215C721600FAEF17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF88485215C721600FAEF17 /* ViewController.swift */; };
 		8CF88489215C721600FAEF17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF88487215C721600FAEF17 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		8C4B2F99216312DE006177A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CD6FFB52165B589000CDC62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Selfiegram/User.swift; sourceTree = "<group>"; };
 		8CD6FFB72165B784000CDC62 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Selfiegram/Post.swift; sourceTree = "<group>"; };
+		8CD6FFBB216C4954000CDC62 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedTableViewController.swift; path = Selfiegram/FeedTableViewController.swift; sourceTree = "<group>"; };
 		8CF88480215C721600FAEF17 /* Selfiegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfiegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF88483215C721600FAEF17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF88485215C721600FAEF17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		8CF88477215C721500FAEF17 = {
 			isa = PBXGroup;
 			children = (
+				8CD6FFBB216C4954000CDC62 /* FeedTableViewController.swift */,
 				8CD6FFB52165B589000CDC62 /* User.swift */,
 				8CD6FFB72165B784000CDC62 /* Post.swift */,
 				8CF88482215C721600FAEF17 /* Selfiegram */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD6FFB62165B589000CDC62 /* User.swift in Sources */,
+				8CD6FFBC216C4954000CDC62 /* FeedTableViewController.swift in Sources */,
 				8C4B2F9A216312DE006177A6 /* ProfileViewController.swift in Sources */,
 				8CF88486215C721600FAEF17 /* ViewController.swift in Sources */,
 				8CF88484215C721600FAEF17 /* AppDelegate.swift in Sources */,
