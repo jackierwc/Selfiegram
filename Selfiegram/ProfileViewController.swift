@@ -7,15 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBAction func cameraButtonPressed(_ sender: Any) {// 1: Create an ImagePickerController
+    @IBAction func cameraButtonPressed(_ sender: Any) {
         let pickerController = UIImagePickerController()
         
-        // 2: Self in this line refers to this View Controller
-        //    Setting the Delegate Property means you want to receive a message
-        //    from pickerController when a specific event is triggered.
         pickerController.delegate = self
         
         if TARGET_OS_SIMULATOR == 1 {
@@ -44,8 +42,22 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         //    We are getting an image from the UIImagePickerControllerOriginalImage key in that dictionary
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
-            //2. To our imageView, we set the image property to be the image the user has chosen
-            profileImageView.image = image
+            // setting the compression quality to 90%
+            if let imageData = image.jpegData(compressionQuality: 0.9),
+                let imageFile = PFFile(data: imageData),
+                let user = PFUser.current(){
+               
+                // avatarImage is a new column in our User table
+                user["avatarImage"] = imageFile
+                user.saveInBackground(block: { (success, error) -> Void in
+                    if success {
+                        // set our profileImageView to be the image we have picked
+                        let image = UIImage(data: imageData)
+                        self.profileImageView.image = image
+                    }
+                })
+                
+            }
             
         }
         
@@ -56,11 +68,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var usernamelabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
 
-        usernamelabel.text = "Jackie"
+//        usernamelabel.text = "Jackie"
         // Do any additional setup after loading the view.
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            if let user = PFUser.current() {
+                usernamelabel.text = user.username
+                
+                if let imageFile = user["avatarImage"] as? PFFile {
+                    
+                    imageFile.getDataInBackground(block: { (data, error) -> Void in
+                        if let imageData = data {
+                            self.profileImageView.image = UIImage(data: imageData)
+                        }
+                    })
+                }
+            }
+        }
     }
     
 
@@ -74,4 +103,4 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     */
 
-}
+
