@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientConfiguration.applicationId = "jc123"
             clientConfiguration.server = "https://jc-setuptest.herokuapp.com/parse"
         }
+        Post.registerSubclass()
+        
         Parse.initialize(with: configuration)
         
         let user = PFUser()
@@ -30,6 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         user.signUpInBackground(block: { (success, error) -> Void in
             if success {
                 print("successfully signuped a user")
+            }else {
+                PFUser.logInWithUsername(inBackground: username, password: password, block: { (user, error) -> Void in
+                    if let user = user {
+                        print("successfully logged in \(user)")
+                    }
+                })
             }
         })
         

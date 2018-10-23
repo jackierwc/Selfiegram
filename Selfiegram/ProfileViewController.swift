@@ -11,27 +11,24 @@ import Parse
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var usernamelabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         let pickerController = UIImagePickerController()
         
         pickerController.delegate = self
         
         if TARGET_OS_SIMULATOR == 1 {
-            // 3. We check if we are running on a Simulator
-            //    If so, we pick a photo from the simulator’s Photo Library
-            // We need to do this because the simulator does not have a camera
+            
             pickerController.sourceType = .photoLibrary
         } else {
-            // 4. We check if we are running on an iPhone or iPad (ie: not a simulator)
-            //    If so, we open up the pickerController's Camera (Front Camera, for selfies!)
             pickerController.sourceType = .camera
             pickerController.cameraDevice = .front
             pickerController.cameraCaptureMode = .photo
         }
         
-        // Preset the pickerController on screen
         self.present(pickerController, animated: true, completion: nil)
-        
         
     }
     
@@ -66,11 +63,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    @IBOutlet weak var usernamelabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+         usernamelabel.text = "Jackie"
+    }
 //        usernamelabel.text = "Jackie"
         // Do any additional setup after loading the view.
         
