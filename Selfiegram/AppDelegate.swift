@@ -15,23 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         let configuration = ParseClientConfiguration { clientConfiguration in
             clientConfiguration.applicationId = "jc123"
             clientConfiguration.server = "https://jc-setuptest.herokuapp.com/parse"
         }
         Post.registerSubclass()
+        Activity.registerSubclass()
         
         Parse.initialize(with: configuration)
         
         let user = PFUser()
         let username = "jackie"
         let password = "chen"
+        
         user.username = username
         user.password = password
         user.signUpInBackground(block: { (success, error) -> Void in
             if success {
                 print("successfully signuped a user")
+                
             }else {
                 PFUser.logInWithUsername(inBackground: username, password: password, block: { (user, error) -> Void in
                     if let user = user {

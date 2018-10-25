@@ -43,10 +43,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuL-18-gMY">
+                                            <rect key="frame" x="344" y="258" width="23" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="IpS-cp-KLT"/>
+                                                <constraint firstAttribute="height" constant="20" id="wXG-hy-sF1"/>
+                                            </constraints>
+                                            <state key="normal" image="hearts-off"/>
+                                            <state key="selected" image="hearts-on"/>
+                                            <connections>
+                                                <action selector="likeButtonClicked:" destination="Rls-dT-FP4" eventType="touchUpInside" id="O7N-Ck-8T9"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="TuL-18-gMY" secondAttribute="trailing" constant="8" id="0G0-xv-P3l"/>
                                         <constraint firstItem="qPk-5k-IqB" firstAttribute="leading" secondItem="6Ii-Xh-3wH" secondAttribute="leadingMargin" id="5W9-zb-DxJ"/>
                                         <constraint firstAttribute="trailing" secondItem="YTP-Wg-ka2" secondAttribute="trailing" id="6Rb-ma-0Ik"/>
+                                        <constraint firstItem="TuL-18-gMY" firstAttribute="top" secondItem="YTP-Wg-ka2" secondAttribute="bottom" constant="8" id="EO1-lz-Pub"/>
                                         <constraint firstItem="YTP-Wg-ka2" firstAttribute="top" secondItem="6Ii-Xh-3wH" secondAttribute="top" id="Jcw-LM-Rdu"/>
                                         <constraint firstItem="YTP-Wg-ka2" firstAttribute="top" secondItem="6Ii-Xh-3wH" secondAttribute="top" id="Pxb-Rg-QOp"/>
                                         <constraint firstItem="YTP-Wg-ka2" firstAttribute="leading" secondItem="6Ii-Xh-3wH" secondAttribute="leading" id="hZ0-sP-3DO"/>
@@ -58,6 +72,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="c2n-xE-731" id="01v-XP-hyG"/>
+                                    <outlet property="likeButtonClick" destination="TuL-18-gMY" id="UZh-R2-Ih0"/>
                                     <outlet property="selfieImageView" destination="YTP-Wg-ka2" id="UbG-Hy-qXf"/>
                                     <outlet property="usernameLabel" destination="qPk-5k-IqB" id="CNx-Nc-AHr"/>
                                 </connections>
@@ -252,6 +267,8 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="hearts-off" width="42" height="37"/>
+        <image name="hearts-on" width="42" height="37"/>
         <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
