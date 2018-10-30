@@ -14,23 +14,48 @@ class FeedTableViewController: UITableViewController, UIImagePickerControllerDel
     var words = ["Hello", "my", "name", "is", "Selfiegram"]
     var posts = [Post]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func getPosts() {
         if let query = Post.query() {
             query.order(byDescending: "createdAt")
             query.includeKey("user")
             
             query.findObjectsInBackground(block: { (posts, error) -> Void in
-               
+                self.refreshControl?.endRefreshing()
                 if let posts = posts as? [Post]{
                     self.posts = posts
                     self.tableView.reloadData()
                 }
+                
             })
         }
     }
+    
+    @IBAction func doubleTappedSelfie(_ sender: UITapGestureRecognizer) {
+        
+        // get the location (x,y) position on our tableView where we have clicked
+        let tapLocation = sender.location(in: tableView)
+        
+        // based on the x, y position we can get the indexPath for where we are at
+        if let indexPathAtTapLocation = tableView.indexPathForRow(at: tapLocation){
+            
+            // based on the indexPath we can get the specific cell that is being tapped
+            let cell = tableView.cellForRow(at: indexPathAtTapLocation) as! SelfieCell
+            
+            //run a method on that cell.
+            cell.tapAnimation()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getPosts()
+    }
 
+    @IBAction func refreshPulled(_ sender: UIRefreshControl) {
+        
+        getPosts()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
