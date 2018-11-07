@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C48B1A32192A840006E0487 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF8848F215C721D00FAEF17 /* Info.plist */; };
 		8C4B2F9A216312DE006177A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B2F99216312DE006177A6 /* ProfileViewController.swift */; };
 		8CD6FFB62165B589000CDC62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FFB52165B589000CDC62 /* User.swift */; };
 		8CD6FFB82165B784000CDC62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FFB72165B784000CDC62 /* Post.swift */; };
@@ -188,7 +189,7 @@
 				8CF8847C215C721600FAEF17 /* Sources */,
 				8CF8847D215C721600FAEF17 /* Frameworks */,
 				8CF8847E215C721600FAEF17 /* Resources */,
-				07BAE64CA5A4D9D40C7300A0 /* [CP] Copy Pods Resources */,
+				E8542284E5B886BCEA8B44FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C48B1A32192A840006E0487 /* Info.plist in Resources */,
 				8CF8848E215C721D00FAEF17 /* LaunchScreen.storyboard in Resources */,
 				8CF8848B215C721D00FAEF17 /* Assets.xcassets in Resources */,
 				8CF88489215C721600FAEF17 /* Main.storyboard in Resources */,
@@ -306,24 +308,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07BAE64CA5A4D9D40C7300A0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1E6176F53AC4981997D0BF20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +324,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8542284E5B886BCEA8B44FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfiegram/Pods-Selfiegram-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -161,7 +161,7 @@ class SelfieCellTableViewCell: UITableViewCell {
             self.heartAnimationView.isHidden = true
         }
         
-        likeButtonClicked(likeButton)
+        likeButtonClicked(likeButtonClick)
     }
 
 }

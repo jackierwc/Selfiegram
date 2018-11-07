@@ -39,7 +39,7 @@ class FeedTableViewController: UITableViewController, UIImagePickerControllerDel
         if let indexPathAtTapLocation = tableView.indexPathForRow(at: tapLocation){
             
             // based on the indexPath we can get the specific cell that is being tapped
-            let cell = tableView.cellForRow(at: indexPathAtTapLocation) as! SelfieCell
+            let cell = tableView.cellForRow(at: indexPathAtTapLocation) as! SelfieCellTableViewCell
             
             //run a method on that cell.
             cell.tapAnimation()
@@ -48,7 +48,7 @@ class FeedTableViewController: UITableViewController, UIImagePickerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "Selfigram-logo"))
         getPosts()
     }
 
